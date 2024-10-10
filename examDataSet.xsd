@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="examDataSet" targetNamespace="http://tempuri.org/examDataSet.xsd" xmlns:mstns="http://tempuri.org/examDataSet.xsd" xmlns="http://tempuri.org/examDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="examConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="examConnectionString (MySettings)" PropertyReference="ApplicationSettings.EXAM.My.MySettings.GlobalReference.Default.examConnectionString" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="venueTableAdapter" GeneratorDataComponentClassName="venueTableAdapter" Name="venue" UserDataComponentName="venueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="examConnectionString (MySettings)" DbObjectName="venue" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT vnam FROM venue</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="vnam" DataSetColumn="vnam" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="examDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="examDataSet" msprop:Generator_UserDSName="examDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="venue" msprop:Generator_TableClassName="venueDataTable" msprop:Generator_TableVarName="tablevenue" msprop:Generator_TablePropName="venue" msprop:Generator_RowDeletingName="venueRowDeleting" msprop:Generator_RowChangingName="venueRowChanging" msprop:Generator_RowEvHandlerName="venueRowChangeEventHandler" msprop:Generator_RowDeletedName="venueRowDeleted" msprop:Generator_UserTableName="venue" msprop:Generator_RowChangedName="venueRowChanged" msprop:Generator_RowEvArgName="venueRowChangeEvent" msprop:Generator_RowClassName="venueRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vnam" msprop:Generator_ColumnVarNameInTable="columnvnam" msprop:Generator_ColumnPropNameInRow="vnam" msprop:Generator_ColumnPropNameInTable="vnamColumn" msprop:Generator_UserColumnName="vnam" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
